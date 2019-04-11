@@ -13,16 +13,17 @@ class ImageText():
 	def textImage(self):
 		draw.text(self.a,self.imageText,font=self.font)
 		image.save('textImage.png')
+		image.show()
 
 	def maskImage(self):
-			draw.text(self.a,self.imageText,font=self.font)
-			size=draw.textsize(self.imageText,font=self.font)
-			offset=font.getoffset(self.imageText)
-			draw.rectangle((x,y, x+size[0],x+size[1]-10),fill='red')
-			#draw.rectangle((200, 200, 200 + size[0] + offset[0], 200 + size[1] + offset[1]),fill='red')
-
-			image.save('masked.png')
-
+		draw.text(self.a,self.imageText,font=self.font)
+		size=draw.textsize(self.imageText,font=self.font)
+		offset=font.getoffset(self.imageText)
+		draw.rectangle((x,y, x+size[0],x+size[1]-10),fill='red')
+		#draw.rectangle((200, 200, 200 + size[0] + offset[0], 200 + size[1] + offset[1]),fill='red')
+		
+		image.save('masked.png')
+		image.show()
 if __name__ == '__main__':
 
 	#image=Image.open(input("Enter image path: "))
